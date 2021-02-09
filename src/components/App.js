@@ -1,14 +1,13 @@
-import { Switch, Route } from 'react-router-dom';
+// import { Switch, Route } from 'react-router-dom';
+
+import AppBar from 'components/AppBar';
 import Container from 'components/Container';
-import AppBar from 'components/';
 import './App.css';
 
-function App() {
+export default function App() {
   return (
     <Container>
       <AppBar />
     </Container>
   );
 }
-
-export default App;
