@@ -1,0 +1,18 @@
+.wrapper {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.list {
+  list-style: none;
+}
+
+.title {
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.text {
+  text-align: center;
+}

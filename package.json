@@ -2,7 +2,6 @@
   "name": "react-template",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://davidass.github.io/goit-react-hw-04-movies/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
@@ -13,6 +12,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-icons": "^4.2.0",
+    "react-loader-spinner": "^4.0.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "react-toastify": "^7.0.3",
@@ -24,7 +24,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "netlify deploy -p"
   },
   "eslintConfig": {
     "extends": [

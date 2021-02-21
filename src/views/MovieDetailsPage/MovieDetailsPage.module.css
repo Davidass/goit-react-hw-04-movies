@@ -1,0 +1,55 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+  border-bottom: 1px solid #2a363b;
+}
+
+.image {
+  margin-left: 20px;
+  margin-right: 30px;
+  width: 300px;
+  height: auto;
+}
+
+.title {
+  font-size: 26px;
+}
+
+.movieTitle {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.description {
+  max-width: 800px;
+}
+
+.nav {
+  text-align: center;
+}
+
+.link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px;
+  font-weight: 500;
+  color: #2a363b;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.activeLink {
+  composes: link;
+  color: #2196f3;
+}
+
+.list {
+  padding-left: 10px;
+}
+
+.item {
+  padding-left: 0;
+}
