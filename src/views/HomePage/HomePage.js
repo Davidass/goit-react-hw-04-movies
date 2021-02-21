@@ -20,13 +20,11 @@ function HomePage() {
 
   useEffect(() => {
     setStatus(Status.PENDING);
-    fetchTredingMovies()
-      .then(request => setMovies(request.results))
-      .then(setStatus(Status.RESOLVED))
-      .catch(error => {
-        setError(error);
-        setStatus(Status.REJECTED);
-      });
+    fetchTredingMovies().then(request => setMovies(request.results));
+    setStatus(Status.RESOLVED).catch(error => {
+      setError(error);
+      setStatus(Status.REJECTED);
+    });
   }, []);
 
   if (status === Status.PENDING) {

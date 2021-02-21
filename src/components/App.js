@@ -31,7 +31,7 @@ export default function App() {
   return (
     <Container>
       <AppBar />
-      <Suspense fallbank={<LoaderView />}>
+      <Suspense fallback={<LoaderView />}>
         <Switch>
           <Route path="/" exact>
             <HomePage />

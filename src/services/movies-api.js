@@ -1,6 +1,6 @@
-const BASE_URL = 'https://api.themoviedb.org/3/';
+const BASE_URL = 'https://api.themoviedb.org/3';
 const API_KEY = '4e8226e4afb17257e9daeef0b809e15f';
-const TREND_URL = `${BASE_URL}/trending/movie/week?api_key=${API_KEY}`;
+const TREND_URL = `${BASE_URL}/trending/movie/day?api_key=${API_KEY}`;
 
 export const POSTER_URL = 'https://image.tmdb.org/t/p/w500';
 
