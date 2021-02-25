@@ -16,22 +16,22 @@ export default function MoviesPage() {
   const { url } = useRouteMatch();
   const history = useHistory();
   const location = useLocation();
-  const [page, setPage] = useState(1);
+  // const [page, setPage] = useState(1);
   const [error, setError] = useState(null);
   const [movieName, setMovieName] = useState(null);
   const [query, setQuery] = useState(null);
   const [status, setStatus] = useState(Status.IDLE);
 
-  // const page = new URLSearchParams(location.search).get('page') ?? 1;
+  const page = new URLSearchParams(location.search).get('page') ?? 1;
 
   useEffect(() => {
-    if ((location.search = '')) {
+    if (location.search === '') {
       return;
     }
 
     const newSearch = new URLSearchParams(location.search).get('query');
-    setQuery(newSearch);
-  }, [location, location.search]);
+    setQuery(newSearch, page);
+  }, [location, location.search, page]);
 
   useEffect(() => {
     if (!query) return;
@@ -41,7 +41,7 @@ export default function MoviesPage() {
       .fetchSeachMovies(query, page)
       .then(({ results }) => {
         if (results.length === 0) {
-          setError(`No results were found for ${query}`);
+          setError(`No results were found for ${query}!`);
           setStatus(Status.REJECTED);
           return;
         }
@@ -61,10 +61,14 @@ export default function MoviesPage() {
     setQuery(newSearch);
     setMovieName(null);
     setError(null);
-    setPage(1);
+    // setPage(1);
     setStatus(Status.IDLE);
-    history.push({ ...location, search: `query=${newSearch}` });
+    history.push({ ...location, search: `query=${newSearch}&page=1` });
   };
+
+  // const onHandlePage = (event, page) => {
+  //   history.push({ ...location, search: `query=${query}&page=${page}` });
+  // };
 
   return (
     <main className={s.main}>

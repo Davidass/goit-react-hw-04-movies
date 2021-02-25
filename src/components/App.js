@@ -10,7 +10,7 @@ import LoaderView from 'components/LoaderView';
 import './App.css';
 
 const HomePage = lazy(() =>
-  import('../views/HomePage' /* webpackChunkName: "HomePage" */),
+  import('../views/HomePage/HomePage.js' /* webpackChunkName: "HomePage" */),
 );
 
 const MoviesPage = lazy(() =>
